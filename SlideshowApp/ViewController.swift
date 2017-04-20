@@ -10,9 +10,56 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
+  
+    
+    
+    
+    var counter = 0
+    
+    @IBAction func susumu(_ sender: Any) {
+        
+        counter = counter + 1
+        
+        if ( counter > 2 ) {   //2以上になると、0になる
+            counter = 0
+        }
+        
+        if ( counter == 0 ) {
+            myImageView.image = UIImage(named:"1.jpg")
+        }
+        else if ( counter == 1 ) {
+            myImageView.image = UIImage(named:"2.jpg")
+        }
+        else if ( counter == 2 ) {
+            myImageView.image = UIImage(named:"3.jpg")
+        }
+    }
+    
+    @IBAction func modoru(_ sender: Any) {
+        
+        counter = counter - 1
+        
+        if ( counter < 0 ) {
+            counter = 2
+        }
+        
+        if ( counter == 0 ) {
+            myImageView.image = UIImage(named:"1.jpg")
+        }
+        else if ( counter == 1 ) {
+            myImageView.image = UIImage(named:"2.jpg")
+        }
+        else if ( counter == 2 ) {
+            myImageView.image = UIImage(named:"3.jpg")
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+ 
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +69,3 @@ class ViewController: UIViewController {
 
 
 }
-
