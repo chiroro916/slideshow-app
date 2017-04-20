@@ -55,17 +55,39 @@ class ViewController: UIViewController {
         }
     }
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
  
+        //UIImageViewをタップしたら、画面遷移
+        myImageView.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target:self, action: #selector(ViewController.tapImage(sender:)))
+        myImageView.addGestureRecognizer(gesture)
 
     }
 
+//    func tapImage(sender: UITapGestureRecognizer) {
+//        print("OK")
+      func tapImage(sender: UITapGestureRecognizer) {
+            print("OK")
+            let next = storyboard!.instantiateViewController(withIdentifier: "nextView")
+            self.present(next,animated: true, completion: nil)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+     segueから遷移先のResultViewControllerを取得する
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let resultViewController = storyboard!.instantiateViewController(withIdentifier: //"ResultViewController")
+    resultViewController.imageView = self.myImageView // ←ここで次の画面のUIImageViewインスタンスに対し、myImageViewをコピーしてあげる
+    
+    self.present(next,animated: true, completion: nil)
+    }
 
 }
