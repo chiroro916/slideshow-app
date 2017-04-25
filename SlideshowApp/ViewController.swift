@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // タイマー用の時間のための変数
+    var timer: Timer!
+    var timer_sec: Float = 0
+    
+    
     @IBOutlet weak var myImageView: UIImageView!
     
     
@@ -61,6 +66,10 @@ class ViewController: UIViewController {
     }
 
     
+    // タイマーの作成、始動
+    self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,12 +90,31 @@ class ViewController: UIViewController {
         self.present(resultViewController, animated: true, completion: nil)
     }
 
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+
+    // selector: #selector(updatetimer) で指定された関数
+    // timeInterval: 0.1, repeats: true で指定された通り、2秒毎に呼び出され続ける
+    func updateTimer(timer: Timer) {
+        timer_sec += 2
+        timerLabel.text = String(format: "%.1f", timer_sec)
+    }
+    
+    @IBAction func saisei(_ sender: Any) {
+        
+        // 動作中のタイマーを1つに保つために、 timer が存在しない場合だけ、タイマーを生成して動作させる
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        }
+        
+        
+    }
 
     
   
