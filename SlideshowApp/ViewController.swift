@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
   
     
-    
-    
     var counter = 0
     
     @IBAction func susumu(_ sender: Any) {
@@ -68,12 +66,12 @@ class ViewController: UIViewController {
 
     }
 
-//    func tapImage(sender: UITapGestureRecognizer) {
-//        print("OK")
+
       func tapImage(sender: UITapGestureRecognizer) {
-            print("OK")
-            let next = storyboard!.instantiateViewController(withIdentifier: "nextView")
-            self.present(next,animated: true, completion: nil)
+//      let next = storyboard!.instantiateViewController(withIdentifier: "nextView")
+        let resultViewController = storyboard!.instantiateViewController(withIdentifier:"ResultViewController") as! ResultViewController
+        resultViewController.myImageView = self.myImageView
+        self.present(resultViewController, animated: true, completion: nil)
     }
 
     
@@ -82,12 +80,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-     segueから遷移先のResultViewControllerを取得する
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let resultViewController = storyboard!.instantiateViewController(withIdentifier: //"ResultViewController")
-    resultViewController.imageView = self.myImageView // ←ここで次の画面のUIImageViewインスタンスに対し、myImageViewをコピーしてあげる
+
     
-    self.present(next,animated: true, completion: nil)
-    }
+  
 
 }
