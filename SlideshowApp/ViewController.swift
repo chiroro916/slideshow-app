@@ -11,10 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myImageView: UIImageView!
-  
+    
+    
+    //ボタンを押した際の動作はOutlet接続する
+    @IBOutlet weak var modoru: UIButton!
+    
+    @IBOutlet weak var saiseiteishi: UIButton!
+    
+    @IBOutlet weak var susumu: UIButton!
+    
     
     var counter = 0
-    
     @IBAction func susumu(_ sender: Any) {
         
         counter = counter + 1
