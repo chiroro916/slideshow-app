@@ -16,8 +16,7 @@ class ResultViewController: UIViewController {
     
 //    let myImage = UIImage(named: "3.jpg")
 //    myImageView.image = myImage
-    
-    
+    var imageName:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()

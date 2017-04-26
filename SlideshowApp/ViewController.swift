@@ -100,7 +100,7 @@ class ViewController: UIViewController {
 
       func tapImage(sender: UITapGestureRecognizer) {
 //      let next = storyboard!.instantiateViewController(withIdentifier: "nextView")
-        let resultViewController = storyboard!.instantiateViewController(withIdentifier:"ResultViewController") as! ResultViewController
+        let resultViewController = storyboard!.instantiateViewController(withIdentifier:"nextView") as! ResultViewController
 //        resultViewController.myImageView = self.myImageView
           resultViewController.imageName = imageArray[counter]
         self.present(resultViewController, animated: true, completion: nil)
