@@ -13,8 +13,9 @@ class ResultViewController: UIViewController {
     
     
     @IBOutlet weak var myImageView: UIImageView!
-    let myImage = UIImage(named: "3.jpg")
-//??    myImageView.image = myImage
+    
+//    let myImage = UIImage(named: "3.jpg")
+//    myImageView.image = myImage
     
     
     
