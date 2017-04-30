@@ -22,6 +22,7 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 //        let myImageView = UIImage
+        myImageView.image = UIImage(named: self.imageName)
         
     }
 
