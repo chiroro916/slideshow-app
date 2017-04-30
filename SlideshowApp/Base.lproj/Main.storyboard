@@ -113,13 +113,16 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="c1I-WP-b09" kind="unwind" unwindAction="unwindWithSegue:" id="xc6-1g-nvw"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="atP-y7-yzy">
                                 <rect key="frame" x="91" y="243.5" width="193" height="180"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="QEJ-Vo-7mh"/>
-                                    <constraint firstAttribute="width" constant="193" id="kgV-rn-YtC"/>
+                                    <constraint firstAttribute="height" constant="180" id="QEJ-Vo-7mh" userLabel="height = 200"/>
+                                    <constraint firstAttribute="width" constant="193" id="kgV-rn-YtC" userLabel="width = 220"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -136,6 +139,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czD-Ck-Ugv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="c1I-WP-b09" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="757.60000000000002" y="9.4452773613193415"/>
         </scene>

@@ -14,16 +14,19 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var myImageView: UIImageView!
     
-//    let myImage = UIImage(named: "3.jpg")
-//    myImageView.image = myImage
     var imageName:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+//        let myImageView = UIImage
+        
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

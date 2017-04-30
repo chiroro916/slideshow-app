@@ -80,7 +80,8 @@ class ViewController: UIViewController {
     // 関数の外で処理を書かない様にしてください。
 //    self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     
-    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
