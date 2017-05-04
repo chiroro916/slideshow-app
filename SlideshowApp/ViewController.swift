@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     @IBAction func susumu(_ sender: Any) {
         // counterを1増やします。
         counter = counter + 1
+        
         // counter（imageArrayの添え字）は0〜2の値を取ります。
         // 一方、imageArray.countはimageArrayの要素数を返却しますので、この場合は3が返却されます。
         // そこで、counterをimageArray.count - 1（=2）と比較して、おおきい場合は0を設定します。
@@ -41,6 +42,8 @@ class ViewController: UIViewController {
             counter = 0
         }
         myImageView.image = UIImage(named:imageArray[counter])
+
+
 /*
         if ( counter == 0 ) {
             myImageView.image = UIImage(named:"1.jpg")
@@ -55,13 +58,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func modoru(_ sender: Any) {
-        
-        counter = counter - 1
+     
+       counter = counter - 1
         
         if ( counter < 0 ) {
             counter = imageArray.count - 1
+//            counter = 2
         }
-        counter = imageArray.count - 1
+
+        myImageView.image = UIImage(named:imageArray[counter])
+        
         
 /*               if ( counter == 0 ) {
             myImageView.image = UIImage(named:"1.jpg")
